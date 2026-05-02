@@ -20,3 +20,4 @@ To connect mongoDB with express :
 3. Created .get function using async-await to show data.
 4. Created .post function using async-await to insert data.
 5. After connection is established created a collection named students and try to insert data.
+6. Now inserting data.
