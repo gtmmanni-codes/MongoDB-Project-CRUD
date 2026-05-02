@@ -1,0 +1,25 @@
+{
+  "name": "mongodb-project-crud",
+  "version": "1.0.0",
+  "description": "Implementation of mongoDB with express and following CRUD operation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gtmmanni-codes/MongoDB-Project-CRUD.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/gtmmanni-codes/MongoDB-Project-CRUD/issues"
+  },
+  "homepage": "https://github.com/gtmmanni-codes/MongoDB-Project-CRUD#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
