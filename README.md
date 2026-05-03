@@ -21,3 +21,15 @@ To connect mongoDB with express :
 4. Created .post function using async-await to insert data.
 5. After connection is established created a collection named students and try to insert data.
 6. Now inserting data.
+
+## Inserting data
+
+1. To insert data after connection is established , I created data inform of JSON in bady parameter.
+2. Then store it in obj variable.
+3. Afterwards, I inserted data using async await and insertone() command line.
+
+## Read data
+
+1. In similar way of inserting firstly created function and establish a connection.
+2. Then used .find() command line to show data .
+3. As we have multiple data we need to use .toArray function also.
