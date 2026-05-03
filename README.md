@@ -15,21 +15,75 @@ To connect mongoDB with express :
 
 ## Index file
 
-1. Created a variable to import express using require.
-2. Imported dbConnection function.
-3. Created .get function using async-await to show data.
-4. Created .post function using async-await to insert data.
-5. After connection is established created a collection named students and try to insert data.
-6. Now inserting data.
+1. First, I imported express and created an app using it.
+2. Then I imported dbConnection function to connect MongoDB database.
+3. I used express.json() to read JSON data from request body.
+4. After that, I created two APIs:
+   GET API to read data
+   POST API to insert data
+5. Used async-await in both APIs to handle database operations.
+6. Created and used collection named Students.
 
 ## Inserting data
 
-1. To insert data after connection is established , I created data inform of JSON in bady parameter.
-2. Then store it in obj variable.
-3. Afterwards, I inserted data using async await and insertone() command line.
+In this part, I created API to insert student data into MongoDB.
+
+**Endpoint: /student-insert**
+**Method: POST**
+
+Working steps:
+
+1.  First, connection is established using dbConnection().
+2.  Then selected collection Students using:
+    newDB.collection("Students")
+
+3.  After that, I created an object named obj:
+    let obj = {
+    "sName": req.body.name,
+    "sEmail": req.body.email
+    }
+4.  Data is taken from request body (req.body).
+5.  Then inserted data into MongoDB using:
+
+                    insertOne(obj)
+
+6.  Finally, response is sent back to user.
+    Example JSON (Request Body):
+    {
+    "name": "John",
+    "email": "john@example.com"
+    }
 
 ## Read data
 
-1. In similar way of inserting firstly created function and establish a connection.
-2. Then used .find() command line to show data .
-3. As we have multiple data we need to use .toArray function also.
+In this part, I created API to read all student data from MongoDB.
+
+**Endpoint: /student-read**
+**Method: GET**
+
+Working steps:
+
+1.  First, connection is established using dbConnection().
+2.  Then selected collection Students.
+3.  Used find() function to get all records:
+
+            newCollection.find()
+
+4.  Since data is in cursor form, I used:
+
+            toArray()
+
+    to convert it into array.
+
+5.  Stored result in data variable.
+6.  Created object obj1:
+
+            let obj1 = {
+            status: 1,
+            msg: "Data",
+            data
+            }
+
+7.  Finally, sent response using:
+
+            res.send({ obj1 });
