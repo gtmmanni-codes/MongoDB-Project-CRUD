@@ -8,7 +8,7 @@ app.use(express.json());
 app.get("/student-read",async(req,res)=>{
      let newDB = await dbConnection();
     let newCollection = newDB.collection("Students");
-    let data = await newCollection.find().toArray();
+    let data = await newCollection.find().toArray(); //showing data in array format.
     let obj1 ={
         status:1,
         msg:"Data",data
