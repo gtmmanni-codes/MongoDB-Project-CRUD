@@ -10,7 +10,7 @@ app.get("/student-read",async(req,res)=>{
     let obj1 ={
         status:1,
         msg:"Data",data
-    }   
+    };   
     res.send({obj1 });
 });
 
