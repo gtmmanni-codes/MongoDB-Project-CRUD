@@ -89,3 +89,4 @@ Working steps:
             res.send({ obj1 });
 
 8.  Adding more data
+9.  Adding delete function
