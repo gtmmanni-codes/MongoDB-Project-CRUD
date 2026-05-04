@@ -87,3 +87,5 @@ Working steps:
 7.  Finally, sent response using:
 
             res.send({ obj1 });
+
+8.  Adding more data
