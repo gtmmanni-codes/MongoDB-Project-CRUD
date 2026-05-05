@@ -10,6 +10,8 @@ const client = new MongoClient(dataBaseURL);
 
 // Function to establish database connection
 let dbConnection = async()=>{
+
+     // Connect to MongoDB server
     await client.connect();
     let myDB = client.db("DB_Project");
     return myDB;
