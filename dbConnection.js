@@ -8,6 +8,7 @@ const dataBaseURL = 'mongodb://localhost:27017';
 // Create a new MongoDB client instance
 const client = new MongoClient(dataBaseURL);
 
+// Function to establish database connection
 let dbConnection = async()=>{
     await client.connect();
     let myDB = client.db("DB_Project");
