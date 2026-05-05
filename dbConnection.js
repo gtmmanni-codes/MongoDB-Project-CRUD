@@ -1,3 +1,5 @@
+
+// Import MongoDB client from mongodb package
 const { MongoClient } = require('mongodb');
 const dataBaseURL = 'mongodb://localhost:27017';
 const client = new MongoClient(dataBaseURL);
