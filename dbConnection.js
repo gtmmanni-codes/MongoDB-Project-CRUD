@@ -14,6 +14,8 @@ let dbConnection = async()=>{
      // Connect to MongoDB server
     await client.connect();
     let myDB = client.db("DB_Project");
+
+    // Return database object for use in other files
     return myDB;
 
 }
