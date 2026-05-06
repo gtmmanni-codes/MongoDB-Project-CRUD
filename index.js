@@ -22,7 +22,7 @@ app.delete("/student-delete/:id",async(req,res)=>{
     let {id} = req.params; 
     let newDB = await dbConnection();
     let newCollection = newDB.collection("Students");
-    let delRes = newCollection.deleteOne({_id:new ObjectId(id)});
+    let delRes = await newCollection.deleteOne({_id:new ObjectId(id)});
 
     let obj1 ={
         status:1,
