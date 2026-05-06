@@ -1,5 +1,6 @@
 let express = require("express");
 const { dbConnection } = require("./dbConnection");
+const { ObjectId } = require("mongodb");
 let app = express();
 app.use(express.json());
 
@@ -20,6 +21,8 @@ app.get("/student-read",async(req,res)=>{
 app.delete("/student-delete/:id",async(req,res)=>{
     let newDB = await dbConnection();
     let newCollection = newDB.collection("Students");
+    let delRes = newCollection.deleteOne({_id:new ObjectId(id)});
+    
 
 
 })
