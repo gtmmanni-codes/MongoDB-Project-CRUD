@@ -16,6 +16,13 @@ app.get("/student-read",async(req,res)=>{
     res.send({obj1 });
 });
 
+
+app.delete("/student-delete/:id",async(req,res)=>{
+    let newDB = await dbConnection();
+    
+
+})
+
 //.post to create insert function 
 app.post("/student-insert",async(req,res)=>{
     let newDB = await dbConnection();
