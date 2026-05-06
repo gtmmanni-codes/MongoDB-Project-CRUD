@@ -19,7 +19,8 @@ app.get("/student-read",async(req,res)=>{
 
 app.delete("/student-delete/:id",async(req,res)=>{
     let newDB = await dbConnection();
-    
+    let newCollection = newDB.collection("Students");
+
 
 })
 
