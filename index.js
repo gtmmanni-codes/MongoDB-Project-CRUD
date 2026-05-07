@@ -60,7 +60,9 @@ app.post("/student-insert",async(req,res)=>{
 app.put("/student-update/:id", async (req, res)=>{
     let {id}=req.params; //Where
     let {name, email}=req.body;
-    
+    let obj={name, email} //data
+    let myDB= await dbConnection();
+
     });
 
 
