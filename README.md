@@ -92,3 +92,13 @@ Working steps:
 9.  Adding delete function
 10. Adding update function
 11. Deleting old data
+
+# Delete Student API
+
+## Endpoint
+
+DELETE /student-delete/:id
+
+## Description
+
+This API is used to delete a student record from the MongoDB database using the student ID.
