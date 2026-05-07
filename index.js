@@ -64,7 +64,12 @@ app.put("/student-update/:id", async (req, res)=>{
     let myDB= await dbConnection();
     let studentCollection=myDB.collection("students")
     let updateRes=await studentCollection.updateOne({_id:new ObjectId(id)}, {$set:{ name, email }})
+    let resobj= {
+        status:1,
+        msg: "Data Update",
+        updateRes}
 
+res.send(resobj)
 
     });
 
