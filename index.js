@@ -66,10 +66,10 @@ app.put("/student-update/:id", async (req, res)=>{
     let updateRes=await studentCollection.updateOne({_id:new ObjectId(id)}, {$set:{ name, email }})
     let resobj= {
         status:1,
-        msg: "Data Update",
+        msg: "Data Update successful",
         updateRes}
 
-res.send(resobj)
+res.send(resobj);
 
     });
 
