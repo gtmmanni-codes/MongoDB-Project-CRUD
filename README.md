@@ -112,3 +112,11 @@ This API is used to delete a student record from the MongoDB database using the 
 ## Example Request
 
 DELETE http://localhost:8000/student-delete/64f12ab45c8d123456789abc
+
+## Working
+
+1. Get student id from request parameters.
+2. Connect to MongoDB database.
+3. Access the `students` collection.
+4. Delete the student document using `deleteOne()`.
+5. Return success response.
