@@ -102,3 +102,13 @@ DELETE /student-delete/:id
 ## Description
 
 This API is used to delete a student record from the MongoDB database using the student ID.
+
+## Request Parameter
+
+| Parameter | Type   | Description                 |
+| --------- | ------ | --------------------------- |
+| id        | String | MongoDB ObjectId of student |
+
+## Example Request
+
+DELETE http://localhost:8000/student-delete/64f12ab45c8d123456789abc
