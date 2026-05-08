@@ -68,6 +68,10 @@ app.put("/student-update/:id", async (req, res) => {
         sEmail
     };
 
+    if(sName !== "" && sName !== undefined && sName !== null){
+        obj[`sName`] = sName
+    }
+
     let myDB = await dbConnection();
 
     let studentCollection = myDB.collection("Students");
