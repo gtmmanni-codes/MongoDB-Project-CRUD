@@ -46,7 +46,10 @@ app.post("/student-insert",async(req,res)=>{
 
     let checkEmail = await newCollection.findOne({sEmail});
     console.log(checkEmail);
-    
+    if(checkEmail){
+        return res.send({status:0,msg:"Email already used"})
+    }
+
     //inserting data 
     let insertData = await newCollection.insertOne(obj)
 
