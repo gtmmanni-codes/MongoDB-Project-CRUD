@@ -57,23 +57,37 @@ app.post("/student-insert",async(req,res)=>{
     res.send({obj});
 })
 
-app.put("/student-update/:id", async (req, res)=>{
-    let {id}=req.params; //Where
-    let {name, email}=req.body;
-    let obj={name, email} //data
-    let myDB= await dbConnection();
-    let studentCollection=myDB.collection("students")
-    let updateRes=await studentCollection.updateOne({_id:new ObjectId(id)}, {$set:{ name, email }})
-    let resobj= {
-        status:1,
-        msg: "Data Update successful",
-        updateRes}
+app.put("/student-update/:id", async (req, res) => {
 
-res.send(resobj);
+    let { id } = req.params;
 
+    let { sName, sEmail } = req.body;
 
+    let obj = {
+        sName,
+        sEmail
+    };
 
-    });
+    let myDB = await dbConnection();
+
+    let studentCollection = myDB.collection("Students");
+
+    let updateRes = await studentCollection.updateOne(
+        { _id: new ObjectId(id) },
+        {
+            $set: obj
+        }
+    );
+
+    let resObj = {
+        status: 1,
+        msg: "Data Update Successful",
+        updateRes
+    };
+
+    res.send(resObj);
+
+});
 
 
 
