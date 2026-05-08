@@ -132,9 +132,10 @@ PUT /student-update/:id
 
 This API updates student data using MongoDB ObjectId.
 
-Example URL
+## Example URL
+
 http://localhost:8000/student-update/69f74627da9af051435db1b0
-Request Body
+Request Body =
 {
 "sName":"Pankaj",
 "sEmail":"pankaj123@gmail.com"
