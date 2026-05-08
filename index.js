@@ -71,6 +71,10 @@ app.put("/student-update/:id", async (req, res) => {
     if(sName !== "" && sName !== undefined && sName !== null){
         obj[`sName`] = sName
     }
+    
+    if(sEmail !== "" && sEmail !== undefined && sEmail !== null){
+        obj[`sEmail`] = sEmail
+    }
 
     let myDB = await dbConnection();
 
