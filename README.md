@@ -121,3 +121,34 @@ DELETE http://localhost:8000/student-delete/64f12ab45c8d123456789abc
 4. Delete the student document using `deleteOne()`.
 5. Return success response.
 6. Testing function and debugging
+
+# Update Student API
+
+## Endpoint
+
+PUT /student-update/:id
+
+## Description
+
+This API updates student data using MongoDB ObjectId.
+
+Example URL
+http://localhost:8000/student-update/69f74627da9af051435db1b0
+Request Body
+{
+"sName":"Pankaj",
+"sEmail":"pankaj123@gmail.com"
+}
+
+## Working
+
+1. Get id from request params.
+2. Convert id into ObjectId.
+3. Access collection.
+4. Update data using:
+   updateOne()
+5. Use $set operator to update fields.
+   {
+   $set: obj
+   }
+   Send response.
