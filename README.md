@@ -153,3 +153,5 @@ Request Body =
    $set: obj
    }
    Send response.
+
+6. Added new features like no one can same email again.
