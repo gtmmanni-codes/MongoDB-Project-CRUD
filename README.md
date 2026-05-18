@@ -156,3 +156,5 @@ Request Body =
 
 6. Added new features like no one can same email again.
 7. Testing function working with some data.
+
+8. adding comments
