@@ -158,3 +158,5 @@ Request Body =
 7. Testing function working with some data.
 
 8. adding comments
+
+9. Added API status codes for responses.
