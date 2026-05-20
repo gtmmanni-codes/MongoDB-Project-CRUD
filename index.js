@@ -53,6 +53,7 @@ app.post("/student-insert",async(req,res)=>{
     //inserting data 
     let insertData = await newCollection.insertOne(obj)
 
+    
   
 
     
