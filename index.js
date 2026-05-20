@@ -53,7 +53,7 @@ app.post("/student-insert",async(req,res)=>{
     //inserting data 
     let insertData = await newCollection.insertOne(obj)
 
-    
+
   
 
     
@@ -103,6 +103,12 @@ app.put("/student-update/:id", async (req, res) => {
     res.send(resObj);
 
 });
+
+
+
+app.get("/student-search/:name",async(req,res)=>{
+    
+})
 
 
 
