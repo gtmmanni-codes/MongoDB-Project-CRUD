@@ -114,7 +114,7 @@ app.get("/student-search/:name",async(req,res)=>{
 
     let data = await studentCollection.find({
         sName: { $regex: name, $options: "i" }
-    })
+    }).toArray();
 })
 
 
