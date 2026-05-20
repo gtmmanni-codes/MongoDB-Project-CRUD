@@ -109,6 +109,7 @@ app.put("/student-update/:id", async (req, res) => {
 app.get("/student-search/:name",async(req,res)=>{
 
     let { name } = req.params;
+    let myDB = await dbConnection();
 })
 
 
