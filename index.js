@@ -111,6 +111,10 @@ app.get("/student-search/:name",async(req,res)=>{
     let { name } = req.params;
     let myDB = await dbConnection();
     let studentCollection = myDB.collection("Students");
+
+    let data = await studentCollection.find({
+        sName: { $regex: name, $options: "i" }
+    })
 })
 
 
