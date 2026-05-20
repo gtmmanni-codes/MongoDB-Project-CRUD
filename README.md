@@ -167,3 +167,7 @@ Request Body =
 14. Improved database query execution flow.
 
 15. adding and testing more data .
+
+# Search Student API
+
+This API is used to search students by name from the MongoDB database.
