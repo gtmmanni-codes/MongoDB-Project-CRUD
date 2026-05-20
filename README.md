@@ -176,3 +176,5 @@ The search is:
 
 - Case-insensitive
 - Partial matching supported
+
+http://localhost:8000/student-search/raj
