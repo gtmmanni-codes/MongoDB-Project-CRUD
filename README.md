@@ -171,3 +171,8 @@ Request Body =
 # Search Student API
 
 This API is used to search students by name from the MongoDB database.
+
+The search is:
+
+- Case-insensitive
+- Partial matching supported
