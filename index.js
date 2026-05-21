@@ -126,9 +126,11 @@ app.get("/student-search/:name",async(req,res)=>{
 //single student
 app.get("/student-single/:id", async (req, res) => {
 
+    let { id } = req.params;
 
-    
+
 });
+
 
 
 
