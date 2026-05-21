@@ -123,6 +123,14 @@ app.get("/student-search/:name",async(req,res)=>{
 
 
 
+//single student
+app.get("/student-single/:id", async (req, res) => {
+
+
+});
+
+
+
 app.listen("8000",()=>{
     console.log("Server Working properly")
 });
