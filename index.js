@@ -127,6 +127,7 @@ app.get("/student-search/:name",async(req,res)=>{
 app.get("/student-single/:id", async (req, res) => {
 
     let { id } = req.params;
+    
 
 
 });
